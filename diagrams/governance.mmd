@@ -1,0 +1,27 @@
+graph TD
+    subgraph Corporate Governance Structure
+        Board[Board of Directors / Executive Steering Committee] -->|Defines Risk Appetite & Strategic Directives| CISO[Chief Information Security Officer]
+        CISO -->|Drafts Master Policies & Allocates Budget| SEC_STEER[Information Security Steering Committee]
+        SEC_STEER -->|Reviews & Endorses Corporate Policies| GRC_TEAM[GRC / InfoSec Compliance Team]
+    end
+
+    subgraph Operational Enforcement Flow
+        GRC_TEAM -->|Distributes Approved Policies| DEPT_LEADS[Department Leads / Business Unit Heads]
+        DEPT_LEADS -->|Enforces Operational Alignment| SYS_ADMINS[IT Ops & Systems Engineering Teams]
+        SYS_ADMINS -->|Configures Technical Controls & Guardrails| END_USERS[Corporate Staff & Third-Party Contractors]
+    end
+
+    subgraph Auditing & Assurance Loop
+        INTERNAL_AUDIT[Internal Audit / Independent Reviewers] -->|Evaluates Operational Compliance| Board
+        END_USERS -->|Logs, Incidents, & Attestations| GRC_TEAM
+        SYS_ADMINS -->|Telemetry & Configuration Audits| GRC_TEAM
+    end
+
+    style Board fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style CISO fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style SEC_STEER fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#fff
+    style GRC_TEAM fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#fff
+    style DEPT_LEADS fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style SYS_ADMINS fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style END_USERS fill:#4b5563,stroke:#9ca3af,stroke-width:2px,color:#fff
+    style INTERNAL_AUDIT fill:#991b1b,stroke:#ef4444,stroke-width:2px,color:#fff

@@ -1,0 +1,22 @@
+graph TD
+    Identify[Asset Identification & Classification] --> Vulnerability[Threat & Vulnerability Discovery]
+    Vulnerability --> Analyze[Calculate Risk Score: Likelihood x Impact]
+    Analyze --> Evaluate[Compare Against Executive Risk Appetite Threshold]
+
+    Evaluate -->|Risk Above Threshold| Mitigate[Risk Treatment Options]
+    Evaluate -->|Risk Within Threshold| Accept[Formally Accept Risk & Log in Registry]
+
+    Mitigate --> Avoid[Avoid: Discontinue Activity]
+    Mitigate --> Transfer[Transfer: Buy Cyber Insurance]
+    Mitigate --> Reduce[Reduce: Implement Engineering Controls]
+
+    Avoid --> Reassess[Continuous Verification & Auditing]
+    Transfer --> Reassess
+    Reduce --> Reassess
+    Accept --> Reassess
+    Reassess -->|New Threat vectors Emerged| Identify
+
+    style Identify fill:#1e3a8a,stroke:#3b82f6,stroke-width:1px,color:#fff
+    style Evaluate fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style Mitigate fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#fff
+    style Accept fill:#4b5563,stroke:#9ca3af,stroke-width:1px,color:#fff
