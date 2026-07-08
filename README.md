@@ -1,4 +1,4 @@
-```
+
 #  🗺️ Security Standards Alignment
 The underlying policy statements are explicitly written to map to industry standard frameworks. Detailed structural paths include:
 
